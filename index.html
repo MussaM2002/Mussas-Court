@@ -4,76 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mussa's Court</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to bottom, #ff7f00, #5c2300);
+            color: white;
+            text-align: center;
+            font-family: "Press Start 2P", cursive;
+            font-size: 20px;
+        }
+        h1 {
+            font-size: 5em;
+            margin-top: 20px;
+        }
+        .bubble {
+            display: inline-block;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 30px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            margin: 20px;
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+            font-size: 2em;
+            transition: 0.3s;
+        }
+        .bubble:hover {
+            background: rgba(255, 255, 255, 0.5);
+            color: black;
+        }
+        .player-of-the-week {
+            font-size: 3em;
+            margin-top: 50px;
+        }
+    </style>
 </head>
 <body>
+    <h1>WELCOME TO MUSSA'S COURT</h1>
+    <p>Your destination for basketball greatness.</p>
 
-    <!-- 🔥 Header Section -->
-    <header class="hero">
-        <div class="title-container">
-            <img src="basketball-icon.png" class="icon">
-            <h1 class="main-title">WELCOME TO MUSSA'S COURT</h1>
-            <img src="basketball-icon.png" class="icon">
-        </div>
-        <p class="subtitle">Your destination for basketball greatness.</p>
-        <button class="scroll-button" onclick="scrollToSection('#sections')">SCROLL DOWN ⬇</button>
-    </header>
+    <a href="#" class="bubble">SCROLL DOWN ↓</a>
+    
+    <br><br>
 
-    <!-- 🏀 Main Sections -->
-    <section id="sections">
-        <div class="bubble-container">
-            <div class="bubble">
-                <img src="basketball-action.jpg" class="bubble-img">
-                <p class="bubble-text">IN-GAME ACTION</p>
-            </div>
-            <div class="bubble">
-                <img src="stadium.jpg" class="bubble-img">
-                <p class="bubble-text">UNMATCHED ATMOSPHERE</p>
-            </div>
-            <div class="bubble">
-                <img src="training.jpg" class="bubble-img">
-                <p class="bubble-text">ELITE TRAINING</p>
-            </div>
-        </div>
-    </section>
+    <a href="#" class="bubble">IN-GAME ACTION</a>
+    <a href="#" class="bubble">UNMATCHED ATMOSPHERE</a>
+    <a href="#" class="bubble">ELITE TRAINING</a>
 
-    <!-- 🔥 Player of the Week -->
-    <section class="player-of-the-week">
-        <h2 class="player-title">🔥 PLAYER OF THE WEEK 🔥</h2>
-        <img src="player.jpg" class="player-img">
-        <p class="player-description">Shai Gilgeous-Alexander has been on fire this week, dominating the league with elite scoring, playmaking, and leadership!</p>
-    </section>
+    <div class="player-of-the-week">🔥 PLAYER OF THE WEEK 🔥</div>
+    <p>Shai Gilgeous-Alexander has been on fire this week, dominating the league with elite scoring, playmaking, and leadership!</p>
 
-    <!-- 📌 Navigation Links with Bubbles -->
-    <section class="navigation">
-        <div class="nav-bubble" onclick="window.location.href='about.html'">
-            <h3>About Me</h3>
-            <p>Discover who I am and why I love basketball.</p>
-        </div>
-        <div class="nav-bubble" onclick="window.location.href='top5.html'">
-            <h3>My Top 5 Players</h3>
-            <p>Check out my all-time top 5 NBA players.</p>
-        </div>
-        <div class="nav-bubble" onclick="window.location.href='contact.html'">
-            <h3>Contact</h3>
-            <p>Reach out to me with any basketball debates or discussions!</p>
-        </div>
-    </section>
-
-    <!-- 🏆 Footer -->
-    <footer>
-        <p>© 2025 Mussa's Court | All Rights Reserved</p>
-    </footer>
-
-    <!-- 🚀 Smooth Scroll Script -->
-    <script>
-        function scrollToSection(section) {
-            $('html, body').animate({
-                scrollTop: $(section).offset().top
-            }, 800);
-        }
-    </script>
-
+    <a href="#" class="bubble">About Me</a>
+    <a href="#" class="bubble">My Top 5 Players</a>
+    <a href="#" class="bubble">Contact</a>
 </body>
 </html>
+
