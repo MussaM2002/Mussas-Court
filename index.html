@@ -6,103 +6,133 @@
     <title>Mussa's Court</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* 🔥 Fullscreen Hero Section */
+        /* 🔥 Vibrant Backgrounds */
+        body {
+            background: linear-gradient(to bottom, #ff7300, #000);
+            color: white;
+            font-family: 'Bebas Neue', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* 🎬 Fullscreen Hero Section */
         .hero {
             height: 100vh;
-            background: url('banner.jpg') no-repeat center center/cover;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
-            color: white;
-            font-family: 'Bebas Neue', sans-serif;
             position: relative;
+            animation: fadeIn 2s ease-in-out;
         }
 
-        /* 🎨 Title - Bigger, Animated, and Glowing */
+        /* 🎨 Hero Title */
         .hero h1 {
-            font-size: 120px;
+            font-size: 140px;
             font-weight: bold;
-            letter-spacing: 4px;
+            letter-spacing: 6px;
             text-shadow: 5px 5px 20px rgba(255, 165, 0, 1);
-            animation: fadeIn 1.5s ease-in-out, glow 2s infinite alternate;
+            background: linear-gradient(to right, #ffcc00, #ff0000);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: glow 2s infinite alternate;
         }
 
         .hero p {
             font-size: 28px;
-            max-width: 900px;
-            font-family: 'Poppins', sans-serif;
             text-shadow: 2px 2px 8px rgba(255, 165, 0, 0.8);
             animation: fadeIn 2s ease-in-out;
         }
 
+        /* 🔥 Scroll Down Effect */
         .scroll-down {
             font-size: 25px;
             cursor: pointer;
             text-decoration: none;
-            color: #FFA500;
+            color: #ffcc00;
             font-weight: bold;
             animation: bounce 1.5s infinite;
         }
 
-        /* 📸 Image Grid Section */
+        /* 📸 Floating Images Section */
         .image-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
             padding: 50px;
-            justify-items: center;
         }
 
         .image-grid img {
-            width: 100%;
-            max-width: 350px;
+            width: 300px;
             height: auto;
             border-radius: 12px;
             transition: transform 0.3s ease-in-out;
             box-shadow: 0px 0px 15px rgba(255, 165, 0, 0.7);
+            animation: float 4s infinite ease-in-out;
         }
 
         .image-grid img:hover {
-            transform: scale(1.05);
+            transform: scale(1.1);
         }
 
-        /* 🏀 Featured Player Section */
+        /* 🏀 Player of the Week */
         .featured-player {
-            background-color: black;
-            color: white;
             text-align: center;
             padding: 60px;
+            background: linear-gradient(to right, #222, #444);
+            border-radius: 20px;
+            margin: 40px;
+            animation: fadeInUp 1.5s ease-in-out;
         }
 
         .featured-player img {
-            width: 150px;
-            height: 150px;
+            width: 200px;
+            height: 200px;
             object-fit: cover;
             border-radius: 50%;
             box-shadow: 0px 0px 15px rgba(255, 165, 0, 0.8);
         }
 
+        /* 🏆 Legends vs Rising Stars Section */
+        .legends-vs-stars {
+            display: flex;
+            justify-content: space-between;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .legends, .rising-stars {
+            width: 45%;
+            background: rgba(255, 69, 0, 0.9);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 0px 15px rgba(255, 165, 0, 0.9);
+            animation: pulse 3s infinite alternate;
+        }
+
         /* 🔥 Call-to-Action Buttons */
         .cta-buttons {
             margin-top: 30px;
+            text-align: center;
         }
 
         .cta-buttons a {
-            padding: 12px 24px;
-            background-color: #FF4500;
+            padding: 15px 30px;
+            background: linear-gradient(to right, #ff4500, #ffcc00);
             color: white;
             text-decoration: none;
             border-radius: 8px;
             font-size: 22px;
-            margin: 10px;
+            margin: 15px;
             display: inline-block;
             transition: 0.3s;
         }
 
         .cta-buttons a:hover {
-            background-color: #FF8C00;
+            transform: scale(1.1);
+            background: linear-gradient(to right, #ff8c00, #ff4500);
         }
 
         /* 🔄 Keyframe Animations */
@@ -120,6 +150,22 @@
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-10px); }
         }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            from { transform: scale(1); }
+            to { transform: scale(1.05); }
+        }
     </style>
 </head>
 <body>
@@ -131,18 +177,30 @@
         <a href="#gallery" class="scroll-down">SCROLL DOWN ↓</a>
     </section>
 
-    <!-- 📸 Image Grid Section -->
+    <!-- 📸 Floating Images Section -->
     <section id="gallery" class="image-grid">
         <img src="basketball.jpg" alt="Basketball">
         <img src="arena.jpg" alt="Basketball Arena">
         <img src="streetball.jpg" alt="Street Basketball">
     </section>
 
-    <!-- 🏀 Featured Player Section -->
+    <!-- 🏀 Player of the Week Section -->
     <section class="featured-player">
         <h2>PLAYER OF THE WEEK</h2>
-        <img src="tim-duncan.jpg" alt="Tim Duncan">
-        <p>Tim Duncan: 5× NBA Champion & The Big Fundamental.</p>
+        <img src="nikola-jokic.jpg" alt="Nikola Jokic">
+        <p>Nikola Jokić - 2× NBA MVP, Playmaking Big Man, & The Joker of the League.</p>
+    </section>
+
+    <!-- 🏆 Legends vs Rising Stars Section -->
+    <section class="legends-vs-stars">
+        <div class="legends">
+            <h2>LEGENDS</h2>
+            <p>Honoring the greatest players of all time.</p>
+        </div>
+        <div class="rising-stars">
+            <h2>RISING STARS</h2>
+            <p>Highlighting the young players making their mark.</p>
+        </div>
     </section>
 
     <!-- 🔥 Call-to-Action Section -->
