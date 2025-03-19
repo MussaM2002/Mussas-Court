@@ -1,0 +1,17 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+nav a {
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+img {
+    border-radius: 10px;
+    margin: 10px;
+}
