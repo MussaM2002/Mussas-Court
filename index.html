@@ -5,154 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mussa's Court</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* 🔥 Vibrant Background */
-        body {
-            background: linear-gradient(to bottom, #ff7300, #000);
-            color: white;
-            font-family: 'Bebas Neue', sans-serif;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-        }
-
-        /* 🎬 Fullscreen Hero Section */
-        .hero {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            position: relative;
-            animation: fadeIn 2s ease-in-out;
-        }
-
-        /* 🎨 Hero Title */
-        .hero h1 {
-            font-size: 140px;
-            font-weight: bold;
-            text-shadow: 0px 0px 15px rgba(255, 165, 0, 1);
-            animation: glow 2s infinite alternate;
-        }
-
-        .hero p {
-            font-size: 28px;
-            animation: fadeIn 2s ease-in-out;
-        }
-
-        /* 🔥 Scroll Down Effect */
-        .scroll-down {
-            font-size: 25px;
-            cursor: pointer;
-            text-decoration: none;
-            color: #ffcc00;
-            font-weight: bold;
-            animation: bounce 1.5s infinite;
-        }
-
-        /* 📸 Floating Images Section */
-        .image-grid {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            padding: 50px;
-            animation: slideIn 1.5s ease-in-out;
-        }
-
-        .image-grid img {
-            width: 250px;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 20px;
-            transition: transform 0.3s ease-in-out;
-            box-shadow: 0px 0px 15px rgba(255, 165, 0, 0.7);
-            animation: float 4s infinite ease-in-out;
-        }
-
-        .image-grid img:hover {
-            transform: scale(1.1);
-        }
-
-        /* 🔥 Call-to-Action Buttons */
-        .cta-buttons {
-            margin-top: 30px;
-            text-align: center;
-            animation: fadeInUp 1.5s ease-in-out;
-        }
-
-        .cta-buttons a {
-            padding: 15px 30px;
-            background: linear-gradient(to right, #ff4500, #ffcc00);
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-size: 22px;
-            margin: 15px;
-            display: inline-block;
-            transition: 0.3s;
-        }
-
-        .cta-buttons a:hover {
-            transform: scale(1.1);
-            background: linear-gradient(to right, #ff8c00, #ff4500);
-        }
-
-        /* 🔄 Keyframe Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes glow {
-            from { text-shadow: 0 0 10px rgba(255, 165, 0, 1); }
-            to { text-shadow: 0 0 20px rgba(255, 165, 0, 1); }
-        }
-
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-15px); }
-            100% { transform: translateY(0px); }
-        }
-
-        @keyframes slideIn {
-            from { opacity: 0; transform: translateX(-100px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-    </style>
+    <script defer src="script.js"></script>
 </head>
 <body>
 
-    <!-- 🔥 Fullscreen Hero Section -->
+    <!-- Hero Section -->
     <section class="hero">
-        <h1>WELCOME TO MUSSA'S COURT</h1>
-        <p>Your destination for basketball greatness.</p>
-        <a href="#gallery" class="scroll-down">SCROLL DOWN ↓</a>
+        <h1 class="big-title">WELCOME TO MUSSA'S COURT</h1>
+        <p class="sub-text">Your destination for basketball greatness.</p>
+        <a href="#scroll" class="scroll-down">SCROLL DOWN ↓</a>
     </section>
 
-    <!-- 📸 Floating Images Section -->
-    <section id="gallery" class="image-grid">
-        <img src="basketball.jpg" alt="Basketball">
-        <img src="arena.jpg" alt="Basketball Arena">
-        <img src="streetball.jpg" alt="Street Basketball">
+    <!-- Image Gallery -->
+    <section class="image-gallery">
+        <img src="basketball1.jpg" alt="Basketball">
+        <img src="court.jpg" alt="Basketball Court">
+        <img src="dunk.jpg" alt="Dunk Moment">
     </section>
 
-    <!-- 🔥 Call-to-Action Section -->
-    <div class="cta-buttons">
+    <!-- Featured Section -->
+    <section class="featured">
+        <h2>Player of the Week</h2>
+        <div class="player-highlight">
+            <img src="currentplayer.jpg" alt="Player of the Week">
+            <p>Cade Cunningham has been electrifying the league this week, showing elite ball-handling, shooting, and leadership!</p>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <nav>
         <a href="about.html">About Me</a>
         <a href="top5.html">My Top 5 Players</a>
         <a href="contact.html">Contact</a>
-    </div>
+    </nav>
+
+    <footer>
+        <p>© 2025 Mussa's Court | All Rights Reserved</p>
+    </footer>
 
 </body>
 </html>
