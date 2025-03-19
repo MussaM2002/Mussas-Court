@@ -3,64 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mussa's Court - Home</title>
+    <title>Mussa's Court</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
 
-    <!-- Header Section -->
-    <header>
-        <h1 class="animated-title">🏀 WELCOME TO MUSSA'S COURT 🏀</h1>
-        <p class="sub-text">Your destination for basketball greatness.</p>
-        <a href="#content" class="scroll-down">SCROLL DOWN ↓</a>
+    <!-- 🔥 Header Section -->
+    <header class="hero">
+        <div class="title-container">
+            <img src="basketball-icon.png" class="icon">
+            <h1 class="main-title">WELCOME TO MUSSA'S COURT</h1>
+            <img src="basketball-icon.png" class="icon">
+        </div>
+        <p class="subtitle">Your destination for basketball greatness.</p>
+        <button class="scroll-button" onclick="scrollToSection('#sections')">SCROLL DOWN ⬇</button>
     </header>
 
-    <!-- Content Section -->
-    <section id="content">
-        <div class="image-gallery">
-            <div class="image-card">
-                <img src="basketball_action.jpg" alt="Basketball Action">
-                <p>In-Game Action</p>
+    <!-- 🏀 Main Sections -->
+    <section id="sections">
+        <div class="bubble-container">
+            <div class="bubble">
+                <img src="basketball-action.jpg" class="bubble-img">
+                <p class="bubble-text">IN-GAME ACTION</p>
             </div>
-            <div class="image-card">
-                <img src="stadium.jpg" alt="Stadium Atmosphere">
-                <p>Unmatched Atmosphere</p>
+            <div class="bubble">
+                <img src="stadium.jpg" class="bubble-img">
+                <p class="bubble-text">UNMATCHED ATMOSPHERE</p>
             </div>
-            <div class="image-card">
-                <img src="training.jpg" alt="Training Session">
-                <p>Elite Training</p>
+            <div class="bubble">
+                <img src="training.jpg" class="bubble-img">
+                <p class="bubble-text">ELITE TRAINING</p>
             </div>
-        </div>
-
-        <h2 class="highlight-text">🔥 Player of the Week 🔥</h2>
-        <div class="player-week">
-            <img src="shai.jpg" alt="Player of the Week">
-            <p>Shai Gilgeous-Alexander has been on fire this week, dominating the league with elite scoring, playmaking, and leadership!</p>
         </div>
     </section>
 
-    <!-- Navigation Buttons -->
-    <section class="nav-buttons">
-        <div class="nav-card">
-            <a href="about.html">About Me</a>
+    <!-- 🔥 Player of the Week -->
+    <section class="player-of-the-week">
+        <h2 class="player-title">🔥 PLAYER OF THE WEEK 🔥</h2>
+        <img src="player.jpg" class="player-img">
+        <p class="player-description">Shai Gilgeous-Alexander has been on fire this week, dominating the league with elite scoring, playmaking, and leadership!</p>
+    </section>
+
+    <!-- 📌 Navigation Links with Bubbles -->
+    <section class="navigation">
+        <div class="nav-bubble" onclick="window.location.href='about.html'">
+            <h3>About Me</h3>
             <p>Discover who I am and why I love basketball.</p>
         </div>
-        <div class="nav-card">
-            <a href="top5.html">My Top 5 Players</a>
+        <div class="nav-bubble" onclick="window.location.href='top5.html'">
+            <h3>My Top 5 Players</h3>
             <p>Check out my all-time top 5 NBA players.</p>
         </div>
-        <div class="nav-card">
-            <a href="contact.html">Contact</a>
+        <div class="nav-bubble" onclick="window.location.href='contact.html'">
+            <h3>Contact</h3>
             <p>Reach out to me with any basketball debates or discussions!</p>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- 🏆 Footer -->
     <footer>
-        <p>&copy; 2025 Mussa's Court | All Rights Reserved</p>
+        <p>© 2025 Mussa's Court | All Rights Reserved</p>
     </footer>
+
+    <!-- 🚀 Smooth Scroll Script -->
+    <script>
+        function scrollToSection(section) {
+            $('html, body').animate({
+                scrollTop: $(section).offset().top
+            }, 800);
+        }
+    </script>
 
 </body>
 </html>
