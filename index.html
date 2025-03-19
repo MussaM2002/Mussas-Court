@@ -5,70 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mussa's Court - Home</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 <body>
 
-    <!-- Fullscreen Hero Section -->
-    <header class="hero">
-        <h1 class="hero-title">WELCOME TO MUSSA'S COURT</h1>
-        <p class="hero-subtitle">Your destination for basketball greatness.</p>
-        <a href="#content" class="scroll-down">SCROLL DOWN ⬇</a>
+    <!-- Header Section -->
+    <header>
+        <h1 class="animated-title">🏀 WELCOME TO MUSSA'S COURT 🏀</h1>
+        <p class="sub-text">Your destination for basketball greatness.</p>
+        <a href="#content" class="scroll-down">SCROLL DOWN ↓</a>
     </header>
 
-    <!-- Main Content Section -->
-    <main id="content">
-        
-        <!-- Featured Images Section -->
-        <section class="image-gallery">
-            <div class="gallery-item" data-aos="fade-up">
-                <img src="images/basketball-action.jpg" alt="Basketball Action">
-                <h2 class="gallery-title">In-Game Action</h2>
+    <!-- Content Section -->
+    <section id="content">
+        <div class="image-gallery">
+            <div class="image-card">
+                <img src="basketball_action.jpg" alt="Basketball Action">
+                <p>In-Game Action</p>
             </div>
-            <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
-                <img src="images/stadium-crowd.jpg" alt="Stadium Atmosphere">
-                <h2 class="gallery-title">Unmatched Atmosphere</h2>
+            <div class="image-card">
+                <img src="stadium.jpg" alt="Stadium Atmosphere">
+                <p>Unmatched Atmosphere</p>
             </div>
-            <div class="gallery-item" data-aos="fade-up" data-aos-delay="400">
-                <img src="images/training-session.jpg" alt="Training Session">
-                <h2 class="gallery-title">Elite Training</h2>
+            <div class="image-card">
+                <img src="training.jpg" alt="Training Session">
+                <p>Elite Training</p>
             </div>
-        </section>
+        </div>
 
-        <!-- Player of the Week Section -->
-        <section class="player-of-the-week">
-            <h2 class="section-title">🔥 Player of the Week 🔥</h2>
-            <img src="images/player-of-the-week.jpg" alt="Player of the Week">
-            <p class="player-description">Shai Gilgeous-Alexander has been on fire this week, dominating the league with elite scoring, playmaking, and leadership!</p>
-        </section>
+        <h2 class="highlight-text">🔥 Player of the Week 🔥</h2>
+        <div class="player-week">
+            <img src="shai.jpg" alt="Player of the Week">
+            <p>Shai Gilgeous-Alexander has been on fire this week, dominating the league with elite scoring, playmaking, and leadership!</p>
+        </div>
+    </section>
 
-        <!-- Navigation Links -->
-        <nav class="nav-links">
+    <!-- Footer -->
+    <footer>
+        <nav>
             <a href="about.html">About Me</a>
             <a href="top5.html">My Top 5 Players</a>
             <a href="contact.html">Contact</a>
         </nav>
-        
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 Mussa's Court | All Rights Reserved</p>
+        <p>&copy; 2025 Mussa's Court | All Rights Reserved</p>
     </footer>
-
-    <!-- Scroll Animations -->
-    <script>
-        $(document).ready(function() {
-            gsap.from(".hero-title", { opacity: 0, y: -50, duration: 1.5, ease: "power3.out" });
-            gsap.from(".hero-subtitle", { opacity: 0, y: 30, duration: 1.5, ease: "power3.out", delay: 0.5 });
-            gsap.from(".scroll-down", { opacity: 0, scale: 0.8, duration: 1, ease: "back.out(1.7)", delay: 1 });
-
-            $(".scroll-down").on("click", function() {
-                $("html, body").animate({ scrollTop: $("#content").offset().top }, 1000);
-            });
-        });
-    </script>
 
 </body>
 </html>
