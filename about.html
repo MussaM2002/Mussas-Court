@@ -3,32 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Mussa's Court</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>About Me</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to bottom, #ff7f00, #5c2300);
+            color: white;
+            text-align: center;
+            font-family: "Press Start 2P", cursive;
+            font-size: 20px;
+        }
+        h1 {
+            font-size: 5em;
+            margin-top: 50px;
+        }
+        p {
+            font-size: 1.2em;
+            width: 80%;
+            margin: auto;
+            line-height: 1.6;
+        }
+        .nav {
+            margin-top: 20px;
+        }
+        .nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.5em;
+            margin: 0 15px;
+            transition: 0.3s;
+        }
+        .nav a:hover {
+            color: yellow;
+        }
+        .photo-section {
+            margin: 50px auto;
+            width: 90%;
+            max-width: 1200px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .photo-box {
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+        }
+        .photo-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .footer {
+            margin-top: 50px;
+            background: black;
+            padding: 20px;
+            font-size: 1.5em;
+        }
+    </style>
 </head>
 <body>
-
-    <!-- Navigation -->
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="top5.html">My Top 5 Players</a>
+    <div class="nav">
+        <a href="index.html">Home</a> | 
+        <a href="top5.html">My Top 5 Players</a> | 
         <a href="contact.html">Contact</a>
-    </nav>
+    </div>
 
-    <!-- About Section -->
-    <section class="about">
-        <h1 class="animated-title">About Me</h1>
-        <div class="about-content">
-            <p>Hi! I'm Mussa, and basketball is my passion. <b>"Mussa's Court"</b> is where I break down the game, analyze my favorite players, and share insights into what makes basketball legends great.</p>
-            <img src="mussa.jpg" alt="Mussa" class="animated-image">
-            <img src="analyzing.jpg" alt="Basketball Analysis" class="animated-image">
-            <img src="game.jpg" alt="Live Game" class="animated-image">
+    <h1>About Me</h1>
+
+    <p>Hi! I'm Mussa, and basketball is my passion. <strong>"Mussa's Court"</strong> is where I break down the game, analyze my favorite players, and share insights into what makes basketball legends great.</p>
+
+    <!-- Photo Section -->
+    <div class="photo-section">
+        <div class="photo-box">
+            <img src="image1.jpg" alt="Basketball Analysis">
         </div>
-    </section>
+        <div class="photo-box">
+            <img src="image2.jpg" alt="Live Game">
+        </div>
+    </div>
 
-    <footer>
-        <p>© 2025 Mussa's Court | All Rights Reserved</p>
-    </footer>
-
+    <div class="footer">
+        © 2025 Mussa's Court | All Rights Reserved
+    </div>
 </body>
 </html>
