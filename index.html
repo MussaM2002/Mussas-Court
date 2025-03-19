@@ -5,22 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mussa's Court</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Fullscreen header */
+        .hero {
+            height: 100vh;
+            background: url('banner.jpg') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            font-family: 'Bebas Neue', sans-serif;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .scroll-down {
+            margin-top: 20px;
+            font-size: 18px;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .intro {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #1C1C1C;
+            color: #FFA500;
+        }
+    </style>
 </head>
 <body>
-    <header>
+    <!-- Fullscreen Hero Section -->
+    <section class="hero">
         <h1>Welcome to Mussa's Court</h1>
         <p>Your destination for basketball greatness.</p>
-        <nav>
-            <a href="about.html">About Me</a> |
-            <a href="top5.html">My Top 5 Players</a> |
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
+        <a href="#intro" class="scroll-down">Scroll Down ↓</a>
+    </section>
 
-    <section>
-        <img src="banner.jpg" alt="Basketball Banner" width="100%">
-        <h2>Explore the Game Like Never Before</h2>
-        <p>Dive into my personal basketball journey, rankings, and insights.</p>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="about.html">About Me</a> |
+        <a href="top5.html">My Top 5 Players</a> |
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Introduction Section -->
+    <section id="intro" class="intro">
+        <h2>About This Site</h2>
+        <p>
+            "Mussa's Court" is where basketball passion meets analysis.  
+            Discover my personal rankings, deep dives into the game's best players,  
+            and insights into what makes basketball legends great.
+        </p>
     </section>
 </body>
 </html>
