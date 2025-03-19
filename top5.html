@@ -3,55 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Top 5 NBA Players - Mussa's Court</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>My Top 5 NBA Players</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to bottom, #ff7f00, #5c2300);
+            color: white;
+            text-align: center;
+            font-family: "Press Start 2P", cursive;
+            font-size: 20px;
+        }
+        h1 {
+            font-size: 5em;
+            margin-top: 50px;
+        }
+        .nav {
+            margin-top: 20px;
+        }
+        .nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.5em;
+            margin: 0 15px;
+            transition: 0.3s;
+        }
+        .nav a:hover {
+            color: yellow;
+        }
+        .player-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .player {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);
+            margin: 20px 0;
+        }
+        .player img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .player-text {
+            width: 50%;
+            font-size: 1.2em;
+            text-align: left;
+        }
+        .player:nth-child(even) {
+            flex-direction: row-reverse;
+            text-align: right;
+        }
+        .footer {
+            margin-top: 50px;
+            background: black;
+            padding: 20px;
+            font-size: 1.5em;
+        }
+    </style>
 </head>
 <body>
-
-    <!-- Navigation -->
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Me</a>
+    <div class="nav">
+        <a href="index.html">Home</a> | 
+        <a href="about.html">About Me</a> | 
         <a href="contact.html">Contact</a>
-    </nav>
+    </div>
 
-    <section class="players-list">
-        <h1 class="animated-title">My Top 5 NBA Players of All Time</h1>
-        
-        <div class="player-card fade-in">
-            <h2>1. LeBron James</h2>
+    <h1>My Top 5 NBA Players of All Time</h1>
+
+    <div class="player-list">
+        <div class="player">
             <img src="lebron.jpg" alt="LeBron James">
-            <p>A 4-time NBA champion, an all-time leading scorer, and an unmatched all-around player.</p>
+            <div class="player-text">
+                <h2>1. LeBron James</h2>
+                <p>A 4-time NBA champion, an all-time leading scorer, and an unmatched all-around player.</p>
+            </div>
         </div>
 
-        <div class="player-card fade-in delay">
-            <h2>2. Michael Jordan</h2>
+        <div class="player">
             <img src="jordan.jpg" alt="Michael Jordan">
-            <p>The GOAT. 6-time NBA champion, 5-time MVP, and a player who defined greatness.</p>
+            <div class="player-text">
+                <h2>2. Michael Jordan</h2>
+                <p>The GOAT. 6-time NBA champion, 5-time MVP, and a player who defined greatness.</p>
+            </div>
         </div>
 
-        <div class="player-card fade-in delay-2">
-            <h2>3. Kobe Bryant</h2>
+        <div class="player">
             <img src="kobe.jpg" alt="Kobe Bryant">
-            <p>The Black Mamba. His killer mentality and 5 rings make him legendary.</p>
+            <div class="player-text">
+                <h2>3. Kobe Bryant</h2>
+                <p>The Black Mamba. His killer mentality and 5 rings make him legendary.</p>
+            </div>
         </div>
 
-        <div class="player-card fade-in delay-3">
-            <h2>4. Kareem Abdul-Jabbar</h2>
+        <div class="player">
             <img src="kareem.jpg" alt="Kareem Abdul-Jabbar">
-            <p>All-time scoring leader before LeBron, legendary skyhook shot.</p>
+            <div class="player-text">
+                <h2>4. Kareem Abdul-Jabbar</h2>
+                <p>All-time scoring leader before LeBron, legendary skyhook shot.</p>
+            </div>
         </div>
 
-        <div class="player-card fade-in delay-4">
-            <h2>5. Stephen Curry</h2>
+        <div class="player">
             <img src="curry.jpg" alt="Stephen Curry">
-            <p>Revolutionized basketball with his deep three-point shooting and 4 NBA championships.</p>
+            <div class="player-text">
+                <h2>5. Stephen Curry</h2>
+                <p>Revolutionized basketball with his deep three-point shooting and 4 NBA championships.</p>
+            </div>
         </div>
-    </section>
+    </div>
 
-    <footer>
-        <p>© 2025 Mussa's Court | All Rights Reserved</p>
-    </footer>
-
+    <div class="footer">
+        © 2025 Mussa's Court | All Rights Reserved
+    </div>
 </body>
 </html>
