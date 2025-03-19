@@ -1,17 +1,65 @@
+/* Import Custom Basketball Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     text-align: center;
+    background-color: #1C1C1C; /* Dark background for a bold contrast */
+    color: #FFA500; /* Orange basketball-themed text */
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #000; /* Black navigation bar */
+    padding: 15px;
 }
 
 nav a {
-    padding: 10px;
-    background-color: blue;
+    font-family: 'Bebas Neue', sans-serif; /* Cool basketball-style font */
+    padding: 12px 18px;
+    background-color: #FF4500; /* Bright basketball orange */
     color: white;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 8px;
+    font-size: 18px;
+    margin: 5px;
+    display: inline-block;
+    transition: 0.3s;
 }
 
+nav a:hover {
+    background-color: #FF8C00; /* Lighter orange on hover */
+}
+
+/* Headings */
+h1, h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* List Styling */
+ol {
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: left;
+    padding: 20px;
+}
+
+li {
+    margin-bottom: 30px;
+}
+
+/* Player Images */
 img {
-    border-radius: 10px;
-    margin: 10px;
+    border-radius: 15px;
+    margin: 15px;
+    width: 90%; /* Ensure responsiveness */
+    max-width: 450px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 5px 5px 15px rgba(255, 165, 0, 0.5); /* Orange glow effect */
 }
