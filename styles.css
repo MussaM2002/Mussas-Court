@@ -1,65 +1,107 @@
-/* Import Custom Basketball Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600&display=swap');
-
+/* General Styling */
 body {
     font-family: 'Poppins', sans-serif;
-    text-align: center;
-    background-color: #1C1C1C; /* Dark background for a bold contrast */
-    color: #FFA500; /* Orange basketball-themed text */
     margin: 0;
     padding: 0;
-}
-
-/* Navigation Bar */
-nav {
-    background-color: #000; /* Black navigation bar */
-    padding: 15px;
-}
-
-nav a {
-    font-family: 'Bebas Neue', sans-serif; /* Cool basketball-style font */
-    padding: 12px 18px;
-    background-color: #FF4500; /* Bright basketball orange */
+    background: linear-gradient(to bottom, #ff6f00, #000);
     color: white;
-    text-decoration: none;
-    border-radius: 8px;
+    text-align: center;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hero h1 {
+    font-size: 60px;
+    font-weight: bold;
+    text-shadow: 4px 4px 10px rgba(255, 255, 0, 0.8);
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in forwards;
+}
+.hero p {
+    font-size: 20px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in 0.5s forwards;
+}
+.scroll-down {
+    margin-top: 20px;
     font-size: 18px;
-    margin: 5px;
-    display: inline-block;
-    transition: 0.3s;
+    color: yellow;
+    text-decoration: none;
+    animation: bounce 1s infinite;
 }
 
-nav a:hover {
-    background-color: #FF8C00; /* Lighter orange on hover */
+/* Image Grid */
+.image-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px;
+    flex-wrap: wrap;
+}
+.image-container {
+    width: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.image-container:hover {
+    transform: scale(1.1);
+}
+.image-container img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 0, 0.8);
+}
+.image-container p {
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
-/* Headings */
-h1, h2 {
-    font-family: 'Bebas Neue', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+/* Player of the Week */
+.player-week {
+    padding: 50px;
+    background: rgba(0, 0, 0, 0.8);
 }
-
-/* List Styling */
-ol {
-    max-width: 600px;
-    margin: 20px auto;
-    text-align: left;
+.player-card {
+    background: #333;
     padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    text-align: center;
+}
+.player-card img {
+    width: 150px;
+    border-radius: 50%;
+}
+.player-card h3 {
+    margin: 10px 0;
+    color: #ffcc00;
+}
+.player-card p {
+    font-size: 16px;
 }
 
-li {
-    margin-bottom: 30px;
+/* Footer */
+footer {
+    padding: 20px;
+    background: black;
+    color: yellow;
 }
 
-/* Player Images */
-img {
-    border-radius: 15px;
-    margin: 15px;
-    width: 90%; /* Ensure responsiveness */
-    max-width: 450px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 5px 5px 15px rgba(255, 165, 0, 0.5); /* Orange glow effect */
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
 }
