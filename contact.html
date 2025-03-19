@@ -3,30 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Mussa's Court</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Contact Me</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to bottom, #ff7f00, #5c2300);
+            color: white;
+            text-align: center;
+            font-family: "Press Start 2P", cursive;
+            font-size: 20px;
+        }
+        h1 {
+            font-size: 5em;
+            margin-top: 50px;
+        }
+        .nav {
+            margin-top: 20px;
+        }
+        .nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.5em;
+            margin: 0 15px;
+            transition: 0.3s;
+        }
+        .nav a:hover {
+            color: yellow;
+        }
+        .contact-container {
+            width: 80%;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input, textarea {
+            width: 90%;
+            max-width: 600px;
+            padding: 15px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.5em;
+            font-family: "Press Start 2P", cursive;
+            text-align: center;
+        }
+        textarea {
+            height: 150px;
+            resize: none;
+        }
+        button {
+            width: 50%;
+            padding: 15px;
+            margin-top: 20px;
+            background: white;
+            color: black;
+            border: none;
+            font-size: 1.5em;
+            font-family: "Press Start 2P", cursive;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: yellow;
+            color: black;
+        }
+        .footer {
+            margin-top: 50px;
+            background: black;
+            padding: 20px;
+            font-size: 1.5em;
+        }
+    </style>
 </head>
 <body>
-
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Me</a>
+    <div class="nav">
+        <a href="index.html">Home</a> | 
+        <a href="about.html">About Me</a> | 
         <a href="top5.html">My Top 5 Players</a>
-    </nav>
+    </div>
 
-    <section class="contact-section">
-        <h1 class="animated-title">Contact Me</h1>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
+    <h1>Contact Me</h1>
+
+    <div class="contact-container">
+        <form action="#" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
             <button type="submit">Send</button>
         </form>
-    </section>
+    </div>
 
-    <footer>
-        <p>© 2025 Mussa's Court | All Rights Reserved</p>
-    </footer>
-
+    <div class="footer">
+        © 2025 Mussa's Court | All Rights Reserved
+    </div>
 </body>
 </html>
