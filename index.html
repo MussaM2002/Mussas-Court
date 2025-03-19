@@ -22,7 +22,7 @@
         }
 
         .hero h1 {
-            font-size: 60px;
+            font-size: 90px; /* Bigger title */
             margin-bottom: 10px;
             letter-spacing: 3px;
             text-shadow: 3px 3px 10px rgba(255, 165, 0, 0.8);
@@ -30,28 +30,30 @@
         }
 
         .hero p {
-            font-size: 22px;
-            max-width: 600px;
+            font-size: 28px; /* Larger subtext */
+            max-width: 700px;
             margin: 10px auto;
+            font-family: 'Poppins', sans-serif; /* Different font for subtext */
             text-shadow: 2px 2px 8px rgba(255, 165, 0, 0.8);
             animation: fadeIn 2s ease-in-out;
         }
 
-        /* Side Images */
+        /* Side Images - Circular */
         .side-images {
             position: absolute;
-            top: 50%;
+            top: 55%;
             transform: translateY(-50%);
             display: flex;
             justify-content: space-between;
             width: 100%;
-            padding: 0 50px;
+            padding: 0 30px;
         }
 
         .side-images img {
-            width: 180px;
-            height: auto;
-            border-radius: 10px;
+            width: 140px;
+            height: 140px;
+            border-radius: 50%; /* Circular shape */
+            object-fit: cover;
             box-shadow: 0px 0px 15px rgba(255, 165, 0, 0.7);
             transition: transform 0.3s ease-in-out;
         }
@@ -60,9 +62,30 @@
             transform: scale(1.1);
         }
 
+        /* More Images Below */
+        .image-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .image-gallery img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%; /* Circular shape */
+            object-fit: cover;
+            box-shadow: 0px 0px 15px rgba(255, 165, 0, 0.7);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-gallery img:hover {
+            transform: scale(1.1);
+        }
+
         .scroll-down {
-            margin-top: 20px;
-            font-size: 20px;
+            margin-top: 30px;
+            font-size: 22px;
             cursor: pointer;
             text-decoration: none;
             color: #FFA500;
@@ -117,12 +140,12 @@
     <section class="hero">
         <h1>WELCOME TO MUSSA'S COURT</h1>
         <p>Your destination for basketball greatness.</p>
-        <a href="#intro" class="scroll-down">SCROLL DOWN ↓</a>
+        <a href="#gallery" class="scroll-down">SCROLL DOWN ↓</a>
 
-        <!-- Side Images -->
+        <!-- Side Images (Players Not in Top 5) -->
         <div class="side-images">
-            <img src="lebron.jpg" alt="LeBron James">
-            <img src="jordan.jpg" alt="Michael Jordan">
+            <img src="tim-duncan.jpg" alt="Tim Duncan">
+            <img src="allen-iverson.jpg" alt="Allen Iverson">
         </div>
     </section>
 
@@ -132,6 +155,13 @@
         <a href="top5.html">My Top 5 Players</a> |
         <a href="contact.html">Contact</a>
     </div>
+
+    <!-- Image Gallery Below Hero Section -->
+    <section id="gallery" class="image-gallery">
+        <img src="basketball.jpg" alt="Basketball">
+        <img src="arena.jpg" alt="Basketball Arena">
+        <img src="streetball.jpg" alt="Street Basketball">
+    </section>
 
     <!-- Introduction Section -->
     <section id="intro" class="intro">
