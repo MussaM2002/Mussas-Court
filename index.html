@@ -21,8 +21,9 @@
             padding: 20px;
         }
 
+        /* 🏀 Enlarged Title */
         .hero h1 {
-            font-size: 220px; /* 3x Bigger Title */
+            font-size: 200px; /* 3x Bigger Title */
             font-weight: bold;
             margin-bottom: 10px;
             letter-spacing: 3px;
@@ -31,7 +32,7 @@
         }
 
         .hero p {
-            font-size: 32px;
+            font-size: 35px;
             max-width: 800px;
             margin: 10px auto;
             font-family: 'Poppins', sans-serif;
@@ -39,23 +40,23 @@
             animation: fadeIn 2s ease-in-out;
         }
 
-        /* Images Surrounding Title */
+        /* 📸 Surrounding Images */
         .hero-images {
             position: absolute;
-            top: 40%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
-            width: 100%;
-            gap: 30px;
+            justify-content: space-around;
+            align-items: center;
+            padding: 50px;
         }
 
         .hero-images img {
-            width: 180px;
-            height: 180px;
+            width: 250px; /* Larger square images */
+            height: 250px;
             object-fit: cover;
+            border-radius: 10px; /* Slight rounded edges */
             box-shadow: 0px 0px 15px rgba(255, 165, 0, 0.7);
             transition: transform 0.3s ease-in-out;
         }
@@ -66,7 +67,7 @@
 
         .scroll-down {
             margin-top: 30px;
-            font-size: 22px;
+            font-size: 30px;
             cursor: pointer;
             text-decoration: none;
             color: #FFA500;
@@ -79,7 +80,7 @@
             color: #FF4500;
         }
 
-        /* Navigation Bar */
+        /* ⚫ Navigation Bar */
         .nav-bar {
             background-color: black;
             padding: 15px;
@@ -88,12 +89,12 @@
 
         .nav-bar a {
             font-family: 'Bebas Neue', sans-serif;
-            padding: 12px 18px;
+            padding: 15px 22px;
             background-color: #FF4500;
             color: white;
             text-decoration: none;
             border-radius: 8px;
-            font-size: 18px;
+            font-size: 22px;
             margin: 5px;
             display: inline-block;
             transition: 0.3s;
@@ -119,6 +120,7 @@
 
     <!-- Fullscreen Hero Section -->
     <section class="hero">
+        <!-- Surrounding Images -->
         <div class="hero-images">
             <img src="basketball.jpg" alt="Basketball">
             <img src="arena.jpg" alt="Basketball Arena">
@@ -126,6 +128,7 @@
             <img src="tim-duncan.jpg" alt="Tim Duncan">
             <img src="allen-iverson.jpg" alt="Allen Iverson">
         </div>
+
         <h1>WELCOME TO MUSSA'S COURT</h1>
         <p>Your destination for basketball greatness.</p>
         <a href="#gallery" class="scroll-down">SCROLL DOWN ↓</a>
