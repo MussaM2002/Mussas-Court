@@ -3,96 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
+    <title>About Me - Mussa's Court</title>
+
+    <!-- Link to external CSS -->
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Main container */
-        .about-container {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            background: #222;
-            color: white;
-            border-radius: 10px;
-            box-shadow: 0px 0px 15px rgba(255, 165, 0, 0.7);
-            text-align: center;
-        }
 
-        /* Page heading */
-        .about-container h1 {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 36px;
-            letter-spacing: 2px;
-            color: #FFA500;
-        }
+    <!-- Google Font (Poppins) for consistency -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-        /* Profile image */
-        .about-content img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #FFA500;
-            margin-bottom: 15px;
-            box-shadow: 0px 0px 10px rgba(255, 165, 0, 0.5);
-        }
+    <!-- FontAwesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
-        /* About Me text */
-        .about-content p {
-            font-size: 18px;
-            max-width: 600px;
-            line-height: 1.6;
-            margin: 0 auto;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        /* Navigation Buttons */
-        .nav-bar {
-            background-color: black;
-            padding: 15px;
-            text-align: center;
-        }
-
-        .nav-bar a {
-            font-family: 'Bebas Neue', sans-serif;
-            padding: 12px 18px;
-            background-color: #FF4500;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-size: 18px;
-            margin: 5px;
-            display: inline-block;
-            transition: 0.3s;
-        }
-
-        .nav-bar a:hover {
-            background-color: #FF8C00;
-        }
-    </style>
+    <!-- JavaScript for animations -->
+    <script defer src="script.js"></script>
 </head>
 <body>
 
     <!-- Navigation Bar -->
-    <div class="nav-bar">
-        <a href="index.html">Home</a> |
-        <a href="top5.html">My Top 5 Players</a> |
-        <a href="contact.html">Contact</a>
-    </div>
+    <header class="nav-bar">
+        <a href="index.html" class="nav-button">Home</a>
+        <a href="top5.html" class="nav-button">My Top 5 Players</a>
+        <a href="contact.html" class="nav-button">Contact</a>
+    </header>
 
-    <!-- About Me Section -->
-    <div class="about-container">
-        <h1>About Me</h1>
+    <!-- About Section -->
+    <section class="about-section">
+        <h1 class="fade-in">About Me</h1>
+
         <div class="about-content">
-            <img src="my-photo.jpg" alt="My Picture">
-            <p>
-                Hi! I'm Mussa, and basketball is my passion.  
-                "Mussa's Court" is where I break down the game, analyze my favorite players,  
-                and share insights into what makes basketball legends great.  
-                Whether you're a casual fan or a basketball junkie, this is the place for in-depth discussions and rankings.
-            </p>
+            <!-- Text Area -->
+            <div class="text-box fade-in">
+                <p>
+                    Hi! I'm Mussa, and basketball is my passion. 
+                    <b>"Mussa's Court"</b> is where I break down the game, analyze my favorite players, and share insights 
+                    into what makes basketball legends great. Whether you're a casual fan or a basketball junkie, 
+                    this is the place for in-depth discussions and rankings.
+                </p>
+            </div>
+
+            <!-- Image Gallery -->
+            <div class="image-gallery">
+                <img src="mussa.jpg" alt="Mussa" class="fade-in delay">
+                <img src="game-moment.jpg" alt="Basketball Game" class="fade-in delay-2">
+                <img src="legendary-play.jpg" alt="Legendary Play" class="fade-in delay-3">
+            </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Mussa's Court | All Rights Reserved</p>
+    </footer>
 
 </body>
 </html>
