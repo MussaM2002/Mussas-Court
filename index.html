@@ -3,45 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mussa's Court</title>
+    <title>Mussa's Court - Home</title>
     <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 <body>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1 class="big-title">WELCOME TO MUSSA'S COURT</h1>
-        <p class="sub-text">Your destination for basketball greatness.</p>
-        <a href="#scroll" class="scroll-down">SCROLL DOWN ↓</a>
-    </section>
+    <!-- Fullscreen Hero Section -->
+    <header class="hero">
+        <h1 class="hero-title">WELCOME TO MUSSA'S COURT</h1>
+        <p class="hero-subtitle">Your destination for basketball greatness.</p>
+        <a href="#content" class="scroll-down">SCROLL DOWN ⬇</a>
+    </header>
 
-    <!-- Image Gallery -->
-    <section class="image-gallery">
-        <img src="basketball1.jpg" alt="Basketball">
-        <img src="court.jpg" alt="Basketball Court">
-        <img src="dunk.jpg" alt="Dunk Moment">
-    </section>
+    <!-- Main Content Section -->
+    <main id="content">
+        
+        <!-- Featured Images Section -->
+        <section class="image-gallery">
+            <div class="gallery-item" data-aos="fade-up">
+                <img src="images/basketball-action.jpg" alt="Basketball Action">
+                <h2 class="gallery-title">In-Game Action</h2>
+            </div>
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                <img src="images/stadium-crowd.jpg" alt="Stadium Atmosphere">
+                <h2 class="gallery-title">Unmatched Atmosphere</h2>
+            </div>
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="400">
+                <img src="images/training-session.jpg" alt="Training Session">
+                <h2 class="gallery-title">Elite Training</h2>
+            </div>
+        </section>
 
-    <!-- Featured Section -->
-    <section class="featured">
-        <h2>Player of the Week</h2>
-        <div class="player-highlight">
-            <img src="currentplayer.jpg" alt="Player of the Week">
-            <p>Cade Cunningham has been electrifying the league this week, showing elite ball-handling, shooting, and leadership!</p>
-        </div>
-    </section>
+        <!-- Player of the Week Section -->
+        <section class="player-of-the-week">
+            <h2 class="section-title">🔥 Player of the Week 🔥</h2>
+            <img src="images/player-of-the-week.jpg" alt="Player of the Week">
+            <p class="player-description">Shai Gilgeous-Alexander has been on fire this week, dominating the league with elite scoring, playmaking, and leadership!</p>
+        </section>
 
-    <!-- Navigation -->
-    <nav>
-        <a href="about.html">About Me</a>
-        <a href="top5.html">My Top 5 Players</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+        <!-- Navigation Links -->
+        <nav class="nav-links">
+            <a href="about.html">About Me</a>
+            <a href="top5.html">My Top 5 Players</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        
+    </main>
 
+    <!-- Footer -->
     <footer>
         <p>© 2025 Mussa's Court | All Rights Reserved</p>
     </footer>
+
+    <!-- Scroll Animations -->
+    <script>
+        $(document).ready(function() {
+            gsap.from(".hero-title", { opacity: 0, y: -50, duration: 1.5, ease: "power3.out" });
+            gsap.from(".hero-subtitle", { opacity: 0, y: 30, duration: 1.5, ease: "power3.out", delay: 0.5 });
+            gsap.from(".scroll-down", { opacity: 0, scale: 0.8, duration: 1, ease: "back.out(1.7)", delay: 1 });
+
+            $(".scroll-down").on("click", function() {
+                $("html, body").animate({ scrollTop: $("#content").offset().top }, 1000);
+            });
+        });
+    </script>
 
 </body>
 </html>
