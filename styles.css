@@ -1,158 +1,103 @@
-/* Import a stylish, bold font */
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Playfair+Display:wght@400;700&family=Lora:wght@400;700&display=swap');
-
 /* General Styling */
 body {
-    font-family: 'Cinzel', serif; /* Using Cinzel for a bold, classic look */
     margin: 0;
-    background: linear-gradient(to bottom, #ff7b00, #000);
+    padding: 0;
+    background: linear-gradient(to bottom, #ff7e00, #552000);
     color: white;
+    font-family: 'Bebas Neue', cursive;
     text-align: center;
-    min-height: 200vh;  /* Ensures scrolling */
 }
 
-/* Ensure scrolling is enabled */
-html {
-    scroll-behavior: smooth;
-    overflow-y: auto;
+/* Header */
+header {
+    padding: 50px 20px;
 }
-
-/* Titles */
-h1 {
-    font-size: 6rem;
-    font-weight: 900;
-    font-family: 'Playfair Display', serif; /* More elegant font for big headings */
-    text-transform: uppercase;
-    text-shadow: 4px 4px 10px rgba(255, 255, 255, 0.5);
-    animation: fadeIn 2s ease-in-out;
-    padding-top: 50px;
+.animated-title {
+    font-size: 60px;
+    text-shadow: 4px 4px 10px rgba(0,0,0,0.8);
+    animation: fadeIn 1.5s ease-in-out;
 }
-
-h2 {
-    font-size: 3rem;
-    font-family: 'Lora', serif; /* Soft but bold look for subheadings */
-    color: yellow;
-    text-shadow: 2px 2px 10px rgba(255, 255, 0, 0.8);
-}
-
-/* Navigation */
-nav {
-    background: black;
-    padding: 20px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.nav-link {
-    color: white;
-    font-size: 1.5rem;
+.sub-text {
+    font-size: 22px;
     font-weight: bold;
-    font-family: 'Cinzel', serif;
+    opacity: 0.9;
+}
+.scroll-down {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: yellow;
+    color: black;
     text-decoration: none;
-    margin: 20px;
+    font-size: 18px;
+    border-radius: 5px;
     transition: 0.3s;
 }
-
-.nav-link:hover {
-    color: orange;
-    text-shadow: 0 0 10px rgba(255, 165, 0, 1);
+.scroll-down:hover {
+    transform: scale(1.1);
 }
 
 /* Image Gallery */
 .image-gallery {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
     margin-top: 50px;
-    flex-wrap: wrap;
 }
-
-.image-gallery img {
-    width: 30%;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(255, 165, 0, 0.8);
-    transition: transform 0.3s ease-in-out;
-}
-
-.image-gallery img:hover {
-    transform: scale(1.2);
-}
-
-/* Featured Section */
-.featured {
-    margin-top: 80px;
-    padding-bottom: 50px;
-}
-
-.player-highlight {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.large-image {
-    width: 50%;
+.image-card {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 30px rgba(255, 215, 0, 0.9);
+    text-align: center;
+    transition: transform 0.3s;
+}
+.image-card img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.image-card:hover {
+    transform: scale(1.05);
+}
+
+/* Player of the Week */
+.highlight-text {
+    font-size: 45px;
+    margin-top: 80px;
+    text-shadow: 2px 2px 10px yellow;
+}
+.player-week img {
+    width: 350px;
+    height: 350px;
+    border-radius: 15px;
+}
+.player-week p {
+    font-size: 20px;
+    margin-top: 15px;
 }
 
 /* Footer */
 footer {
     background: black;
     padding: 20px;
-    margin-top: 100px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
 }
-
-/* Scroll Down Animation */
-.scroll-down {
-    font-size: 1.5rem;
+footer nav a {
     color: yellow;
     text-decoration: none;
-    animation: bounce 1.5s infinite;
+    font-size: 18px;
+    margin: 0 15px;
+}
+footer nav a:hover {
+    text-decoration: underline;
+}
+footer p {
+    margin-top: 10px;
+    font-size: 14px;
 }
 
 /* Animations */
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-}
-
-@keyframes slideUp {
-    from { transform: translateY(50px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-}
-
-@keyframes zoom {
-    from { transform: scale(0.8); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
-}
-
-.animate-fade-in {
-    animation: fadeIn 2s ease-in-out;
-}
-
-.animate-bounce {
-    animation: bounce 1.5s infinite;
-}
-
-.animate-slide-up {
-    animation: slideUp 1s ease-in-out;
-}
-
-.animate-zoom {
-    animation: zoom 1.5s ease-in-out;
-}
-
-.animate-glow {
-    text-shadow: 0 0 20px rgba(255, 255, 0, 0.9);
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
